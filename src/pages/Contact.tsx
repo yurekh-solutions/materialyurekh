@@ -421,7 +421,7 @@ const Contact = () => {
         <section className="py-12 md:py-20 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-primary-glow/5 pointer-events-none" />
 
-          <div className="container mx-auto px-4 relative z-10">
+          <div className="container mx-auto px-4 relative z-10 ">
             <motion.div
               className="text-center mb-12 md:mb-16"
               initial={{ opacity: 0, y: 20 }}
@@ -474,7 +474,7 @@ const Contact = () => {
           </div>
         </section>
 
-        <div className="container mx-auto px-4 pb-12 md:pb-16">
+        <div className="container mx-auto px-4 pb-12 md:pb-16 mt-10">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
             {/* Contact Form */}
             <div className="lg:col-span-2" ref={formRef}>

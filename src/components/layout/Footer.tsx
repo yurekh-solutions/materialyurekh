@@ -76,7 +76,8 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center shadow-glow">
-                  <img src={logo1} alt="MaterialMatrix Logo" className="w-9 h-9 object-contain" />
+                                <span className="text-gray-400  font-extrabold">mm</span>
+
                 </div>
                 <span className="text-lg font-bold text-foreground">
                   MaterialMatrix

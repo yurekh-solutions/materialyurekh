@@ -29,11 +29,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center shadow-glow">
-              <img
-                src={logo1}
-                alt="MaterialMatrix Logo"
-                className="w-8 h-8 object-contain"
-              />
+              <span className="text-gray-400  font-extrabold">mm</span>
             </div>
             <span className="text-xl font-bold text-foreground">
               MaterialMatrix
@@ -100,9 +96,15 @@ const Header = () => {
         </div>
 
         {/* Mobile Navigation */}
- {isMenuOpen && (
-  <div className="md:hidden absolute top-16 left-0 right-0 glass-morphism
-                  shadow-glass border-t border-glass-border z-50">
+{/* Mobile Navigation */}
+{/* Mobile Navigation */}
+{isMenuOpen && (
+  <div
+    className="md:hidden absolute top-16 left-0 right-0 z-50
+               bg-gradient-to-r from-[rgba(249,115,22,0.8)] to-[rgba(239,68,68,0.7)]
+               backdrop-blur-md border-t border-white/10 shadow-lg
+               transition-all duration-300"
+  >
     <div className="px-4 py-6 space-y-4">
       {navigation.map((item) =>
         item.external ? (
@@ -111,7 +113,8 @@ const Header = () => {
             href={item.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="block px-3 py-2 rounded-md text-base text-foreground hover:bg-primary/10 hover:text-primary transition-all duration-300"
+            className="block px-3 py-2 rounded-md text-base text-white/90 
+                       hover:bg-white/10 hover:text-white transition-all duration-300"
             onClick={() => setIsMenuOpen(false)}
           >
             {item.name}
@@ -122,8 +125,8 @@ const Header = () => {
             to={item.href}
             className={`block px-3 py-2 rounded-md text-base transition-all duration-300 ${
               isActive(item.href)
-                ? "text-primary bg-primary/10 font-semibold"
-                : "text-foreground hover:bg-primary/10 hover:text-primary"
+                ? "text-white bg-white/10 font-semibold"
+                : "text-white/90 hover:bg-white/10 hover:text-white"
             }`}
             onClick={() => setIsMenuOpen(false)}
           >
@@ -134,6 +137,8 @@ const Header = () => {
     </div>
   </div>
 )}
+
+
 
 
       </nav>

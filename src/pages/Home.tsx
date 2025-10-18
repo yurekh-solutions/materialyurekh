@@ -257,7 +257,7 @@ const Home = () => {
 
                 {/* Buttons */}
                 <motion.div
-                  className="flex flex-col sm:flex-row gap-4 mb-12"
+                  className="flex flex-col items-center sm:flex-row gap-4 mb-12"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.7, duration: 0.8 }}
@@ -270,7 +270,7 @@ const Home = () => {
                   <Link to="/about">
                     <Button
                       variant="outline"
-                      className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
+                      className="border-2 border-gray-300 text-gray-700 hover:bg-orange-400 px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
                     >
                       <Play className="w-5 h-5" />
                       Watch demo
@@ -279,23 +279,29 @@ const Home = () => {
                 </motion.div>
 
                 {/* Stats */}
-                <motion.div
-                  className="flex justify-center lg:justify-start gap-8"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 1, duration: 0.8 }}
-                >
-                  {[
-                    { value: "500+", label: "Suppliers" },
-                    { value: "98%", label: "On-time" },
-                    { value: "20+", label: "States" }
-                  ].map((stat, index) => (
-                    <div key={index} className="text-center">
-                      <div className="text-3xl font-bold text-gray-900">{stat.value}</div>
-                      <div className="text-sm text-gray-600 font-medium">{stat.label}</div>
-                    </div>
-                  ))}
-                </motion.div>
+              
+              <motion.div
+  className="flex justify-center lg:justify-start gap-8"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 1, duration: 0.8 }}
+>
+  {[
+    { value: "500+", label: "Suppliers" },
+    { value: "98%", label: "On-time" },
+    { value: "20+", label: "States" }
+  ].map((stat, index) => (
+    <div
+      key={index}
+      className="text-center bg-white rounded-xl shadow-lg px-6 py-4
+                 transition-shadow duration-300 hover:shadow-[0_0_25px_5px_rgba(255,165,0,0.3)]"
+    >
+      <div className="text-3xl font-bold text-gray-900">{stat.value}</div>
+      <div className="text-sm text-gray-600 font-medium">{stat.label}</div>
+    </div>
+  ))}
+</motion.div>
+
               </div>
 
               {/* Right Images Grid */}
